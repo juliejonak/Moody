@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Route} from 'react-router-dom';
-import Form from './components/form';
-import Insights from './components/insights';
+import Form from './components/Form';
+import Insights from './components/Insights';
 import './App.css';
 
 export default class App extends Component {
@@ -25,7 +25,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Route path='/' render={(props) => <Form {...props} />} />
-        <Route path='/results' reunder={(props) => <Insights {...props} /> } />
+        <Route path='/results' reunder={(props) => <Insights {...props} data={this.state.data} /> } />
       </div>
     );
   }
