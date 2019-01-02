@@ -1,0 +1,5 @@
+[build]
+
+base = "./moody"
+publish = "./moody/build"
+command = "yarn build"
