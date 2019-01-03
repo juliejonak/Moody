@@ -22,14 +22,14 @@ export default class Form extends React.Component{
       e.preventDefault();
       
       const newDay = {
-        happiness: 3,
-        stress: 2,
-        energy: 4,
-        sleep: 8,
-        water: 6,
-        alcohol: 1,
-        caffeine: 4,
-        food: 2,
+        mood: this.state.mood,
+        stress: this.state.stress,
+        energy: this.state.energy,
+        sleep: this.state.sleep,
+        water: this.state.water,
+        alcohol: this.state.alcohol,
+        caffeine: this.state.caffeine,
+        food: this.state.food,
       }
 
       axios.post('http://localhost:5000/api/days', newDay)

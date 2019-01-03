@@ -10,7 +10,7 @@ export default class Insights extends React.Component{
             <div>
                 <p>peyton's graph</p>
 
-                <iframe width="900" title="hello" height="800" frameborder="0" scrolling="no" src="//plot.ly/~peytonrunyan/106.embed"></iframe>
+                <iframe width="900" title="hello" height="800" frameBorder="0" scrolling="no" src="//plot.ly/~peytonrunyan/106.embed"></iframe>
             </div>
         )
     }
