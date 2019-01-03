@@ -35,16 +35,12 @@ router.post("/", (req, res) => {
       user.save(function(err) {
         console.log("error", err);
       });
+      PythonShell.run("plotscript.py", null, function(err) {
+        if (err) throw err;
+      });
       res.status(201).json(`Saved: ${data}`);
     })
     .catch(error => res.status(500).json(`Error from server: ${error}`));
 });
 
 module.exports = router;
-
-// Test: Move me //////////
-//   PythonShell.run("plotscript.py", null, function(err) {
-//     if (err) throw err;
-//     console.log("finished");
-//   });
-//////////////////
