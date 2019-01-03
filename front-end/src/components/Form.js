@@ -46,22 +46,22 @@ export default class Form extends React.Component{
     //implement the HTML CSS design of pages
     //setup axios
 
-    // nextSlide = () => {
-    //   this.setState(prevState => {
-    //     formpg: prevState.formpg + 1;
-    //   })
-    // }
+    nextSlide = () => {
+      this.setState(prevState => ({
+        formpg: prevState.formpg + 1
+      }))
+    }
 
-    // prevSlide = (e) => {
-    //   this.setState(prevState => {
-    //     formpg: prevState.formpg - 1;
-    //   })
-    // }
+    prevSlide = (e) => {
+      this.setState(prevState => ({
+        formpg: prevState.formpg - 1
+      }))
+    }
 
-    // updateVal = (e) => {
-    //   this.setState({ [e.target.name]: e.target.value});
-    //   nextSlide();
-    // }
+    updateVal = (e) => {
+      this.setState({ [e.target.name]: e.target.value});
+      this.nextSlide();
+    }
 
     render(){
         return(
