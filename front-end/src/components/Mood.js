@@ -1,4 +1,4 @@
-export default const Mood = (props) => {
+export const Mood = (props) => {
   return (
     <div className="box box1">
       <span className="form-text">How do you feel today?</span>
