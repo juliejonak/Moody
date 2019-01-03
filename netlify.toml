@@ -1,5 +1,5 @@
 [build]
 
-base = "./moody"
-publish = "./moody/build"
+base = "./front-end"
+publish = "./front-end/build"
 command = "yarn build"

@@ -1,22 +1,24 @@
 const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const TAGS = ["Travel", "Work", "Sick", "Date"];
 
 const Day = new mongoose.Schema({
-  key: { type: Number, required: true, unique: true },
+  user_key: { type: Number },
+  user: { type: ObjectId, ref: "User" },
   date: {
     type: Date,
     default: Date.now,
   },
-  happiness: { type: Number },
-  stress: { type: Number },
-  energy: { type: Number },
-  sleep: { type: Number },
-  water: { type: Number },
-  alcohol: { type: Number },
-  caffiene: { type: Number },
-  food: { type: Number },
-  tags: { type: String, enum: TAGS },
+  happiness: Number,
+  stress: Number,
+  energy: Number,
+  sleep: Number,
+  water: Number,
+  alcohol: Number,
+  caffiene: Number,
+  food: Number,
+  tags: [{ type: String, enum: TAGS }],
 });
 
 module.exports = mongoose.model("Day", Day);
