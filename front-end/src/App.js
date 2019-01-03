@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Route } from "react-router-dom";
 import Form from "./components/Form";
-import Insights from "./components/insights";
+import Insights from "./components/Insights";
 import "./App.css";
 
 export default class App extends Component {
