@@ -56,7 +56,7 @@ export default class Form extends React.Component{
     // }
 
     // updateVal = (e) => {
-    //   this.setState({e.target.name: e.target.value});
+    //   this.setState({e.target.name: parseInt(e.target.value)});
     //   nextSlide();
     // }
 
