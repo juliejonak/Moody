@@ -38,7 +38,7 @@ code {
     font-size: 3em;
 }
 
-.water:hover, .water:focus{
+.water:hover, .water:checked{
     color: #3153EA;
     border-radius: 50px;
 }
