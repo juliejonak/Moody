@@ -6,26 +6,28 @@ import '../index.css';
 
 const Intake = (props) => {
   return (
-    <div className="box box1">
-      <span className="form-text">What'd you consume?</span>
-      <span className="form-sub-text">Water</span>
-      <span className="form-sub-category">
-        <FontAwesomeIcon icon={faTint} className="water fas fa-2x" id="water1" />
-        <FontAwesomeIcon icon={faTint} className="water fas fa-3x" id="water2" />
-        <FontAwesomeIcon icon={faTint} className="water fas fa-4x" id="water3" />
-      </span>
-      <span className="form-sub-text">Alcohol</span>
-      <span className="form-sub-category">
-        <FontAwesomeIcon icon={faBeer} className="alcohol fas fa-2x" id="alcohol1" />
-        <FontAwesomeIcon icon={faBeer} className="alcohol fas fa-3x" id="alcohol2" />
-        <FontAwesomeIcon icon={faBeer} className="alcohol fas fa-4x" id="alcohol3" />
-      </span>
-      <span className="form-sub-text">Caffeine</span>
-      <span className="form-sub-category">
-        <FontAwesomeIcon icon={faMugHot} className="caffeine fas fa-2x" id="caffeine1" />
-        <FontAwesomeIcon icon={faMugHot} className="caffeine fas fa-3x" id="caffeine2" />
-        <FontAwesomeIcon icon={faMugHot} className="caffeine fas fa-4x" id="caffeine3" />
-      </span>
+    <div className={props.page === 2 ? 'carousel-item active' : 'carousel-item'}>
+      <div className='box box1'>
+        <span className="form-text">What'd you consume?</span>
+        <span className="form-sub-text">Water</span>
+        <span className="form-sub-category">
+          <FontAwesomeIcon onClick={props.update} icon={faTint} className="water fas fa-2x" id="water1" name="water" value="1" />
+          <FontAwesomeIcon onClick={props.update} icon={faTint} className="water fas fa-3x" id="water2" name="water" value="2" />
+          <FontAwesomeIcon onClick={props.update} icon={faTint} className="water fas fa-4x" id="water3" name="water" value="3" />
+        </span>
+        <span className="form-sub-text">Alcohol</span>
+        <span className="form-sub-category">
+          <FontAwesomeIcon onClick={props.update} icon={faBeer} className="alcohol fas fa-2x" id="alcohol1" name="alcohol" value="1" />
+          <FontAwesomeIcon onClick={props.update} icon={faBeer} className="alcohol fas fa-3x" id="alcohol2" name="alcohol" value="2" />
+          <FontAwesomeIcon onClick={props.update} icon={faBeer} className="alcohol fas fa-4x" id="alcohol3" name="alcohol" value="3" />
+        </span>
+        <span className="form-sub-text">Caffeine</span>
+        <span className="form-sub-category">
+          <FontAwesomeIcon onClick={props.next} icon={faMugHot} className="caffeine fas fa-2x" id="caffeine1" name="caffeine" value="1" />
+          <FontAwesomeIcon onClick={props.next} icon={faMugHot} className="caffeine fas fa-3x" id="caffeine2" name="caffeine" value="2" />
+          <FontAwesomeIcon onClick={props.next} icon={faMugHot} className="caffeine fas fa-4x" id="caffeine3" name="caffeine" value="3" />
+        </span>
+      </div>
     </div>
   )
 };
