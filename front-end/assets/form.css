@@ -40,10 +40,6 @@
     color: rgb(158, 122, 75);
 }
 
-.tags{
-    padding: 5px;
-}
-
-.tags:hover, .tags:checked{
+ .tags:checked{
     color: rgb(55, 186, 238);
 }

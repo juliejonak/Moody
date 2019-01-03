@@ -88,6 +88,6 @@ body{
     align-items: center;
 }
 
-.form-sub-category .tags{
+.form-sub-category .tags, .alcohol, .water, .caffeine {
     padding: 15px;
 }
