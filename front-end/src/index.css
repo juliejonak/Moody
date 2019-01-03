@@ -34,15 +34,23 @@ code {
     border-radius: 50px;
 }
 
-.water {
-    font-size: 3em;
-}
 
 .water:hover, .water:checked{
     color: #3153EA;
     border-radius: 50px;
 }
 
+#water1, #caffeine1, #alcohol1 {
+    font-size: 2em;
+}
+
+#water2, #caffeine2, #alcohol2 {
+    font-size: 3em;
+}
+
+#water3, #caffeine3, #alchohol3 {
+    font-size: 4em;
+}
 
 .eat:hover, .eat:checked {
     color: #FF4099;
