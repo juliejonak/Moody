@@ -25,7 +25,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Route exact path='/' render={(props) => <Form {...props} />} />
-        <Route exact path='/results' reunder={(props) => <Insights {...props} data={this.state.data} /> } />
+        <Route exact path='/results' render={(props) => <Insights {...props} data={this.state.data} /> } />
       </div>
     );
   }
