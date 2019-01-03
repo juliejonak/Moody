@@ -14,9 +14,9 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('')
+    axios.get('http://localhost:5000/api/days')
       .then( response => {
-        this.setState({ data: response.data })
+        console.log('data success', response)
       })
       .catch( err => console.log(err) )
   }
@@ -24,6 +24,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+      <p>Home</p>
         <Route exact path='/' render={(props) => <Form {...props} />} />
         <Route exact path='/results' render={(props) => <Insights {...props} data={this.state.data} /> } />
       </div>

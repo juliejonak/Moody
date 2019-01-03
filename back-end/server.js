@@ -5,6 +5,8 @@ const db = require("./db.js");
 const usersRouter = require("./users/usersRouter.js");
 const daysRouter = require("./days/daysRouter.js");
 
+const cors = require('cors');
+
 const server = express();
 
 db.connectTo("moody")
@@ -13,6 +15,7 @@ db.connectTo("moody")
 
 server.use(helmet());
 server.use(express.json());
+server.use(cors());
 
 server.use("/api/users", usersRouter);
 server.use("/api/days", daysRouter);
