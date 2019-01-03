@@ -47,20 +47,20 @@ export default class Form extends React.Component{
     //setup axios
 
     nextSlide = () => {
-      this.setState(prevState => {
-        formpg: prevState.formpg + 1;
-      })
+      this.setState(prevState => ({
+        formpg: prevState.formpg + 1
+      }))
     }
 
     prevSlide = (e) => {
-      this.setState(prevState => {
-        formpg: prevState.formpg - 1;
-      })
+      this.setState(prevState => ({
+        formpg: prevState.formpg - 1
+      }))
     }
 
     updateVal = (e) => {
       this.setState({ [e.target.name]: e.target.value});
-      nextSlide();
+      this.nextSlide();
     }
 
     render(){
