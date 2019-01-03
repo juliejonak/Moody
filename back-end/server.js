@@ -20,7 +20,9 @@ server.use(cors());
 server.use("/api/users", usersRouter);
 server.use("/api/days", daysRouter);
 
-server.get("/", (req, res) => res.send("Run API run"));
+server.get("/", (req, res) => {
+  res.send("Run API run");
+});
 
 const port = process.env.PORT || 5000;
 server.listen(port, () => {
