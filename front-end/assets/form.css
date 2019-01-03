@@ -1,0 +1,49 @@
+.mood, .sleep, .eat, .water, .alcohol, .caffeine, .tags{
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all .2s ease;
+    outline: none;
+    font-size: 4em; 
+    color:gray;
+}   
+
+.sleep {
+    font-weight: bolder;
+    font-family: 'Timmana', sans-serif;
+}
+
+.mood:hover, .mood:checked, .sleep:hover, .sleep:checked {
+    color: #FF4099;
+    border-radius: 50px;
+}
+
+.water{
+    font-size: 3em;
+}
+
+.water:hover, .water:checked{
+    color: #3153EA;
+}
+
+
+.eat:hover, .eat:checked{
+    color: #FF4099;
+}
+
+.alcohol:hover, .alcohol:checked{
+    color: #FFD016;
+}
+
+.caffeine:hover, .caffeine:checked{
+    color: rgb(158, 122, 75);
+}
+
+.tags{
+    padding: 5px;
+}
+
+.tags:hover, .tags:checked{
+    color: rgb(55, 186, 238);
+}
