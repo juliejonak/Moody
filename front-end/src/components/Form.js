@@ -67,10 +67,10 @@ export default class Form extends React.Component{
                  <p>{this.state.date}</p>
                 <div id="formCarousel" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner">
-                    <Mood className={this.state.formpg == 1 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
-                    {/*<Intake className={this.state.formpg == 2 ? "carousel-item active" :"carousel-item"} next={this.updateVal} />
-                    <Life className={this.state.formpg == 3 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
-                    <Activity className={this.state.formpg == 4 ? "carousel-item active" : "carousel-item"} submit={this.submit} />*/}
+                    <Mood className={this.state.formpg === 1 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
+                    {/*<Intake className={this.state.formpg === 2 ? "carousel-item active" :"carousel-item"} next={this.updateVal} />
+                    <Life className={this.state.formpg === 3 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
+                    <Activity className={this.state.formpg === 4 ? "carousel-item active" : "carousel-item"} submit={this.submit} />*/}
                   </div>
                   <a onClick={this.prevSlide} className="carousel-control-prev" href="#formCarousel" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

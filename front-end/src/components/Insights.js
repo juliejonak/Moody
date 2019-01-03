@@ -8,7 +8,7 @@ export default class Insights extends React.Component{
     render(){
         return(
             <div>
-                <p>peyton's graph</p>
+                <p>peyton graph</p>
 
                 <iframe width="900" title="hello" height="800" frameBorder="0" scrolling="no" src="//plot.ly/~peytonrunyan/106.embed"></iframe>
             </div>
