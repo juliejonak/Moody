@@ -38,7 +38,7 @@ code {
     font-size: 3em;
 }
 
-.water:hover, .water:checked{
+.water:hover, .water:focus{
     color: #3153EA;
     border-radius: 50px;
 }
@@ -135,4 +135,8 @@ body {
     width: 70%;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.tags:checked{
+    color: rgb(55, 186, 238);
 }

@@ -46,8 +46,7 @@ export default class Form extends React.Component{
     //implement the HTML CSS design of pages
     //setup axios
 
-    nextSlide = (e) => {
-      this.updateVal(e);
+    nextSlide = () => {
       this.setState(prevState => ({
         formpg: prevState.formpg + 1
       }))
@@ -61,6 +60,7 @@ export default class Form extends React.Component{
 
     updateVal = (e) => {
       this.setState({ [e.target.name]: e.target.value});
+      this.nextSlide();
     }
 
     render(){
@@ -74,10 +74,10 @@ export default class Form extends React.Component{
               <div id="formCarousel" className="carousel slide" data-ride="carousel">
 
                 <div className="carousel-inner">
-                    <Mood update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
-                    <Intake update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
-                    <Life update={this.updateVal}next={this.nextSlide} page={this.state.formpg} />
-                    <Activity update={this.updateVal} submit={this.submit} page={this.state.formpg} />
+                    <Mood className={this.state.formpg === 1 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
+                    <Intake className={this.state.formpg === 2 ? "carousel-item active" :"carousel-item"} next={this.updateVal} />
+                    <Life className={this.state.formpg === 3 ? "carousel-item active" : "carousel-item"} next={this.updateVal} />
+                    <Activity className={this.state.formpg === 4 ? "carousel-item active" : "carousel-item"} submit={this.submit} />
                 </div>
 
                 <a onClick={this.prevSlide} className="carousel-control-prev" href="#formCarousel" role="button" data-slide="prev">
