@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class Form extends React.Component{
     constructor(props){
@@ -15,6 +16,27 @@ export default class Form extends React.Component{
             tags: [],
             formpg: 1,
         }
+    }
+
+    submit = (e) => {
+      e.preventDefault();
+      
+      const newDay = {
+        happiness: 3,
+        stress: 2,
+        energy: 4,
+        sleep: 8,
+        water: 6,
+        alcohol: 1,
+        caffeine: 4,
+        food: 2,
+      }
+
+      axios.post('http://localhost:5000/api/days', newDay)
+        .then(response => {
+          console.log('a response!', response)
+        })
+        .catch(err => console.log("Couldn't add! ahhhh"))
     }
 
     //implement the HTML CSS design of pages
@@ -40,6 +62,7 @@ export default class Form extends React.Component{
     render(){
         return(
             <div>
+              <button onClick={this.submit}>Press me</button>
                 {/* <p>{this.state.date}</p>
                 <div id="formCarousel" className="carousel slide" data-ride="carousel">
                   <div className="carousel-inner">
