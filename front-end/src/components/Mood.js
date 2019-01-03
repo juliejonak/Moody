@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFrown, faSadCry, faMehBlank, faSmile, faGrinBeam } from '@fortawesome/free-solid-svg-icons';
+import '../index.css';
+
 
 const Mood = (props) => {
   return (
