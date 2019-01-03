@@ -7,7 +7,6 @@ const User = new mongoose.Schema({
   name: { type: String },
   gender: { type: String, enum: GENDERS },
   age: { type: Number },
-  days_key: { type: Number },
   days: [{ type: ObjectId, ref: "Day" }],
 });
 
