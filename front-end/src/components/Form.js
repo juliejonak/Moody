@@ -4,7 +4,6 @@ export default class Form extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            date: '',
             mood: '',
             stress: '',
             energy: '',
@@ -18,12 +17,8 @@ export default class Form extends React.Component{
         }
     }
 
-    componentDidMount(){
-        let currentDate = Date.now();
-        this.setState({
-            date: currentDate
-        })
-    }
+    //implement the HTML CSS design of pages
+    //setup axios
 
     nextSlide = () => {
       this.setState(prevState => {
