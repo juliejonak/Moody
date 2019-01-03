@@ -1,14 +1,17 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
 
 const Life = (props) => {
   return (
     <div>
         <div className="box box1">
           <span className="form-text">How'd you eat today?</span>
-          <form>
-              <span className="eat far fa-thumbs-down" id="eat1"></span>
-              <span className="eat far fa-thumbs-down  fa-rotate-270" id="eat2"> </span>
-              <span className="eat far fa-thumbs-up" id="eat3"></span>
+          <form> 
+              <FontAwesomeIcon icon={faThumbsDown} className="eat far" id="eat1" />  
+              <FontAwesomeIcon icon={faThumbsDown} className="eat far fa-rotate-270" id="eat2" />
+              <FontAwesomeIcon icon={faThumbsUp} className="eat far" id="eat3" />            
             </form>
         </div>
 
@@ -18,7 +21,7 @@ const Life = (props) => {
             <span className="sleep" id="sleep1">z</span>
             <span className="sleep" id="sleep2">zZ</span>
             <span className="sleep" id="sleep3">zZZ</span>
-          </span>
+          </span>      
           </div>
     </div>
   )
