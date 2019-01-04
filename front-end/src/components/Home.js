@@ -1,5 +1,5 @@
 import React from 'react';
-import Insights from './Insights';
+import Intake from './Intake';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDay } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,7 +10,7 @@ const Home = (props) => {
                 <FontAwesomeIcon icon={faCalendarDay} style={{color: 'white', width: '3vh', height: 'auto'}} />
                 <p className='add-day'>Add Day</p>
             </div>
-            <Insights />
+            <Intake />
         </div>
     )
 }
