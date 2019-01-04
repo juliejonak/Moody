@@ -14,9 +14,7 @@ const Life = (props) => {
               <FontAwesomeIcon onClick={props.update} icon={faThumbsDown} className="eat far fa-rotate-270" id="eat2" name="food" value="2" />
               <FontAwesomeIcon onClick={props.update} icon={faThumbsUp} className="eat far" id="eat3" name="food" value="3" />
             </form>
-        </div>
-
-        <div className="box box1">
+          <span> <br/><br/> </span>
           <span className="form-text">How did you sleep last night?</span>
           <span className="form-sub-category">
             <span onClick={props.next} className="sleep" id="sleep1" name="sleep" value="1">z</span>

@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+.carousel-control-prev-icon {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 50px;
+}
+
 .mood, .sleep, .eat, .water, .alcohol, .caffeine {
     -webkit-appearance: none;
     border: none;

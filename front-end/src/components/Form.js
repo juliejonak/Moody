@@ -54,13 +54,17 @@ export default class Form extends React.Component{
     }
 
     prevSlide = (e) => {
+      if (this.state.formpg === 1) {
+        return;
+      }
       this.setState(prevState => ({
         formpg: prevState.formpg - 1
       }))
     }
 
     updateVal = (e) => {
-      this.setState({ [e.target.name]: e.target.value});
+      console.log(e.currentTarget.getAttribute('value'));
+      this.setState({ [e.currentTarget.getAttribute('name')]: parseInt(e.currentTarget.getAttribute('value'))});
     }
 
     render(){
@@ -74,15 +78,15 @@ export default class Form extends React.Component{
               <div id="formCarousel" className="carousel slide" data-ride="carousel">
 
                 <div className="carousel-inner">
-                    <Mood update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
-                    <Intake update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
+                    <Mood mood={this.state.mood} update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
+                    <Intake water={this.state.water} alcohol={this.state.alcohol} caffeine={this.state.caffeine} update={this.updateVal} next={this.nextSlide} page={this.state.formpg} />
                     <Life update={this.updateVal}next={this.nextSlide} page={this.state.formpg} />
                     <Activity update={this.updateVal} submit={this.submit} page={this.state.formpg} />
                 </div>
 
-                <a onClick={this.prevSlide} className="carousel-control-prev" href="#formCarousel" role="button" data-slide="prev">
+                <a style={this.state.formpg === 1 ? {display: 'none'} : null} onClick={this.prevSlide} className="carousel-control-prev" href="#formCarousel" role="button" data-slide="prev">
                   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span className="sr-only">Previous Question</span>
+                  <span style={{background: 'lightgray'}} className="sr-only">Previous Question</span>
                 </a>
 
               </div>
