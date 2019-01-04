@@ -8,8 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('http://lorempixel.com/1500/850/nature/10');
-  background-repeat: no-repeat;
+  /* background-image: url('http://lorempixel.com/1500/850/nature/10');
+  background-repeat: no-repeat; */
 }
 
 code {
