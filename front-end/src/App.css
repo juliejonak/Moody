@@ -42,10 +42,27 @@
 
 .add-day {
   font-family: 'Timmana', sans-serif;
+  font-size: 22px;
   color: white;
   font-weight: bold;
+  height: 5px;
 }
 
-.add-dayBox {
-  color: rgb(255, 64, 153);
+.dayBox {
+  background-color: rgb(255, 64, 153);
+  width: 12vw;
+  margin: auto;
+  height: 7vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 10vw;
+  margin-top: 4vh;
 }

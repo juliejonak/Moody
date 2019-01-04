@@ -34,14 +34,15 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-       
-       <NavBarPage />
 
-       <div>
-         <div className='add-dayBox'>
-           <FontAwesomeIcon icon={faCalendarDay} />
+        <div className='nav'>
+          <h1 className="logo"> Moody </h1>
+          <NavBarPage />
+        </div>
+
+       <div className='dayBox'>
+           <FontAwesomeIcon icon={faCalendarDay} style={{color: 'white', width: '3vh', height: 'auto'}} />
            <p className='add-day'>Add Day</p>
-         </div>
        </div>
         
         <Route path="/form" render={props => <Form {...props} />} />

@@ -15,11 +15,9 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <Container>
-        <Navbar color="white" style={{maxWidth: '400px', minWidth: '400px', margin: 'auto', width: '50%', marginTop: '20px', marginBottom: '20px', lineHeight: '1.0'}} light>
+        <Navbar color="white" style={{margin: 'right', width: '20%', marginTop: '20px', marginBottom: '20px', lineHeight: '1.0', boxShadow: 'none'}} light>
 
           <Container>
-            <h1 className="logo"> Moody </h1>
             <NavbarToggler onClick={this.toggleCollapse('navbarCollapse1')} />
 
             <Collapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
@@ -45,7 +43,6 @@ class NavbarPage extends Component {
           </Container>
 
         </Navbar>
-      </Container>
     );
   }
 }
