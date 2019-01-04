@@ -39,7 +39,7 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 35px 35px 0 35px;
-    width: 500px;
+    width: 700px;
 }
 
 .box1{
@@ -90,4 +90,29 @@ body{
 
 .form-sub-category .tags, .alcohol, .water, .caffeine {
     padding: 15px;
+}
+
+/* button */
+
+button {
+    font-family: 'Timmana', sans-serif;
+    border: 0;
+    padding: 15px 30px 7px 30px;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 20pt;
+    outline: none;
+}
+button i{
+    padding-right: 14px;
+}
+
+button.btn {
+    color: white;
+    background: #FF4099 ;
+}
+
+button.btn:hover {
+    box-shadow: 0 1px 1px #EAEAEA, inset 2px 2px 0 #8e2355;
+    background: #FF4099;
 }
