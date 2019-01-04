@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFrown, faSadCry, faMehBlank, faSmile, faGrinBeam } from '@fortawesome/free-solid-svg-icons';
+import { faFrown, faSadCry, faMehBlank, faSmile, faGrinBeam } from '@fortawesome/free-regular-svg-icons';
 import '../index.css';
 
 
