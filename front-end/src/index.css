@@ -135,7 +135,7 @@ body{
     color: rgb(158, 122, 75);
 }
 
- .tags:checked{
+.tags:hover{
     color: rgb(55, 186, 238);
 }
 
@@ -145,4 +145,28 @@ body{
 
 #caffeine3, #alcohol3, #water3{
     font-size: 110px;
+}
+
+/* button styling */
+button {
+    font-family: 'Timmana', sans-serif;
+    border: 0;
+    padding: 15px 30px 7px 30px;
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 20pt;
+    outline: none;
+}
+button i{
+    padding-right: 14px;
+}
+
+button.btn {
+    color: white;
+    background: #FF4099 ;
+}
+
+button.btn:hover {
+    box-shadow: 0 1px 1px #EAEAEA, inset 2px 2px 0 #8e2355;
+    background: #FF4099;
 }

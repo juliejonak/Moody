@@ -67,7 +67,7 @@ export default class Form extends React.Component{
         return(
             <div>
 
-              <button onClick={this.submit}>Press me</button>
+              <button className="btn" onClick={this.submit}>Press me</button>
 
               <p>{this.state.date}</p>
 
