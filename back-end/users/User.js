@@ -7,7 +7,7 @@ const User = new mongoose.Schema({
   name: { type: String },
   gender: { type: String, enum: GENDERS },
   age: { type: Number },
-  days_key: { type: Number },
+  twitter: { type: String },
   days: [{ type: ObjectId, ref: "Day" }],
 });
 
