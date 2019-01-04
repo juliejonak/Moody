@@ -191,6 +191,10 @@ body{
     color: rgb(55, 186, 238);
 }
 
+#caffeine1, #alcohol1, #water1 {
+  font-size: 60px;
+}
+
 #caffeine2, #alcohol2, #water2{
     font-size: 80px;
 }
