@@ -87,7 +87,7 @@ export default class Form extends React.Component{
                 </div>
 
                 <a style={this.state.formpg === 1 ? {display: 'none'} : null} onClick={this.prevSlide} className="carousel-control-prev" href="#formCarousel" role="button" data-slide="prev">
-                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="carousel-control-prev-icon"></span>
                   <span className="sr-only">Previous Question</span>
                 </a>
 
