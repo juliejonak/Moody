@@ -1,7 +1,20 @@
 const mongoose = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
-const TAGS = ["Travel", "Work", "Sick", "Date"];
+const TAGS = [
+  "running",
+  "hiking",
+  "swimming",
+  "walking",
+  "injury",
+  "traveling",
+  "reading",
+  "lounging",
+  "heavy labor",
+  "date",
+  "shopping",
+  "socializing",
+];
 
 const Day = new mongoose.Schema({
   user: { type: ObjectId, ref: "User" },
