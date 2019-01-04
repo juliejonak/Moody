@@ -24,7 +24,7 @@ class NavbarPage extends Component {
 
               <NavbarNav style={{paddingBottom: '20px'}} left>
 
-                <NavItem className="menu-text" active>
+                <NavItem className="menu-text" style={{opacity: '1'}} active>
                   <Link style={{color: 'rgb(255,64,153)', fontSize: '24px'}} to='/' onClick={this.toggleCollapse('navbarCollapse1')}>Home</Link>
                 </NavItem>
 
