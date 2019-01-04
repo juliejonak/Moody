@@ -25,7 +25,7 @@ const Activity = (props) => {
           <FontAwesomeIcon onClick={props.update} icon={faGlassCheers} className="tags" title="social" id="tags12" />
         </div>
 
-        <button onClick={props.submit}><Link to='/results'>Submit</Link></button>
+        <button onClick={props.submit} className='submitBox' style={{padding: '10px 0px 0px 45px'}}><Link to='/results' style={{fontFamily: 'Timmana, sans-serif', fontSize: '22px', color: 'white', fontWeight: 'bold'}}>Submit</Link></button>
       </div>
     </div>
   )
