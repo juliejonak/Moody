@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Home = (props) => {
     return (
-        <div>
+        <div className='homeBox box1'>
             <div className='dayBox'>
                 <FontAwesomeIcon icon={faCalendarDay} style={{color: 'white', width: '3vh', height: 'auto'}} />
                 <Link to='/form'><p className='add-day'>Add Day</p></Link>

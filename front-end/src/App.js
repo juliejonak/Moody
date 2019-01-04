@@ -11,7 +11,7 @@ import './index.css';
 import "./App.css";
 
 import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 export default class App extends Component {
@@ -40,14 +40,14 @@ export default class App extends Component {
           <h1 className="logo"> Moody </h1>
           <NavBarPage />
         </div>
-        
+
         <Route path="/form" render={props => <Form {...props} />} />
         <Route
           exact
           path="/"
           render={props => <Home {...props} data={this.state.data} />}
         />
-        <Route path='/results' render={props => <Graph {...props} /> } />
+        <Route path='/results' render={props => <div className='graphBox box1'><Graph {...props} /></div> } />
 
         </div>
       </div>
