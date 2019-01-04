@@ -24,8 +24,8 @@ const Intake = (props) => {
         <span className="form-sub-text">Caffeine</span>
         <span className="form-sub-category">
           <FontAwesomeIcon onClick={props.next} icon={faMugHot} style={props.caffeine === 1 ? {color: 'rgb(83, 70, 70)'} : null } className="caffeine fas fa-2x" id="caffeine1" name="caffeine" value="1" />
-          <FontAwesomeIcon onClick={props.next} icon={faMugHot} className="caffeine fas fa-3x" id="caffeine2" name="caffeine" value="2" />
-          <FontAwesomeIcon onClick={props.next} icon={faMugHot} className="caffeine fas fa-4x" id="caffeine3" name="caffeine" value="3" />
+          <FontAwesomeIcon onClick={props.next} icon={faMugHot} style={props.caffeine === 2 ? {color: 'rgb(83, 70, 70)'} : null } className="caffeine fas fa-3x" id="caffeine2" name="caffeine" value="2" />
+          <FontAwesomeIcon onClick={props.next} icon={faMugHot} style={props.caffeine === 3 ? {color: 'rgb(83, 70, 70)'} : null } className="caffeine fas fa-4x" id="caffeine3" name="caffeine" value="3" />
         </span>
       </div>
     </div>
