@@ -15,10 +15,10 @@ class NavbarPage extends Component {
 
   render() {
     return (
-        <Navbar color="white" style={{margin: 'right', width: '20%', marginTop: '20px', marginBottom: '20px', lineHeight: '1.0', boxShadow: 'none'}} light>
+        <Navbar color="white" style={{margin: 'right', width: '50%', marginTop: '20px', marginBottom: '20px', lineHeight: '1.0', boxShadow: 'none'}} light>
 
           <Container>
-            <NavbarToggler onClick={this.toggleCollapse('navbarCollapse1')} />
+            <NavbarToggler onClick={this.toggleCollapse('navbarCollapse1')} style={{marginLeft: '150px', position: 'absolute'}}/>
 
             <Collapse id="navbarCollapse1" isOpen={this.state.collapseID} navbar>
 
