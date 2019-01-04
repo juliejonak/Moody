@@ -15,7 +15,59 @@ code {
     monospace;
 }
 
-*{
+.carousel-control-prev-icon {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.mood, .sleep, .eat, .water, .alcohol, .caffeine {
+    -webkit-appearance: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all .2s ease;
+    outline: none;
+    font-size: 4em;
+    color:gray;
+}
+
+.sleep {
+    font-weight: bolder;
+    font-family: 'Timmana', sans-serif;
+}
+
+.mood:hover, .mood:checked, .sleep:hover, .sleep:checked {
+    color: #FF4099;
+    border-radius: 50px;
+}
+
+.water {
+    font-size: 3em;
+}
+
+.water:hover, .water:checked{
+    color: #3153EA;
+    border-radius: 50px;
+}
+
+
+.eat:hover, .eat:checked {
+    color: #FF4099;
+    border-radius: 50px;
+}
+
+.alcohol:hover, .alcohol:checked {
+    color: #FFD016;
+    border-radius: 50px;
+}
+
+.caffeine:hover, .caffine:checked {
+    color: rgb(83, 70, 70);
+    border-radius: 50px;
+}
+
+* {
     box-sizing: border-box;
 }
 
@@ -106,9 +158,9 @@ body{
     margin: 0 5px;
     transition: all .2s ease;
     outline: none;
-    font-size: 4em; 
+    font-size: 4em;
     color:gray;
-}   
+}
 
 .sleep {
     font-weight: bolder;
