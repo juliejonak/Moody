@@ -100,29 +100,40 @@ def main():
         correlation_dict[i] = df_plot['mood'].corr(df_plot[i])
 
     #Create chart captions
+    tweet_cap = 'broken'
+
+    if day_sentiment == 0:
+        tweet_cap = '<b>Your tweets are neutral today</b>'
+    elif day_sentiment > 0:
+        tweet_cap = '<b>Your tweets are postive today</b>'
+    elif day_sentiment < 0:
+        tweet_cap = '<b>Your tweets are negative today</b>'
+    else:
+        tweet_cap = '<b>You have no tweets to analyze today</b>'
+
     caption_dict = {'coffee':'hold','drinks':'hold','sleep':'hold','exercise':'hold'}
 
     for i in range(len(correlation_list)):
         if correlation_dict[correlation_list[i]] >= .7:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase </b>'
 
         elif correlation_dict[correlation_list[i]] >= .5:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase moderately </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase moderately </b>'
 
         elif correlation_dict[correlation_list[i]] >= .3:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase a little </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase a little </b>'
 
         elif correlation_dict[correlation_list[i]] < .3 and correlation_dict[correlation_list[i]] > -.3:
-            caption_dict[correlation_list[i]] = 'There is no relationship between <b>' + str(correlation_list[i]) + '</b> and your mood'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>There is no relationship between <b>' + str(correlation_list[i]) + '</b> and your mood'
 
         elif correlation_dict[correlation_list[i]] <= -.3 and correlation_dict[correlation_list[i]] > -.5:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease a little </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease a little </b>'
 
         elif correlation_dict[correlation_list[i]] <= -.5 and correlation_dict[correlation_list[i]] > -.7:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease moderately </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease moderately </b>'
 
         elif correlation_dict[correlation_list[i]] < -.7:
-            caption_dict[correlation_list[i]] = 'As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease </b>'
 
     #Create mood rolling average
     rolling_mood = df_plot['mood'].rolling(3).mean()
@@ -249,7 +260,7 @@ def main():
         )
     ])
 
-    layout = dict(title = 'mood',
+    layout = dict(title = 'Results',
                 xaxis= dict(title='Date', ticklen = 5,
                             zeroline=False),
                 autosize=False,
