@@ -30,3 +30,22 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Timmana');
+
+.logo {
+  font-family: 'Timmana', sans-serif;
+  color: rgb(255,64,153);
+  font-weight: bold;
+  margin-top: 3vh;
+}
+
+.add-day {
+  font-family: 'Timmana', sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.add-dayBox {
+  color: rgb(255, 64, 153);
+}

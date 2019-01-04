@@ -9,6 +9,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "font-awesome": "^4.7.0",
+    "mdbreact": "^4.8.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-fontawesome": "^1.6.1",
