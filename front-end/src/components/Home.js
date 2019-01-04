@@ -12,7 +12,7 @@ const Home = (props) => {
                 <FontAwesomeIcon icon={faCalendarDay} style={{color: 'white', width: '3vh', height: 'auto'}} />
                 <Link to='/form'><p className='add-day'>Add Day</p></Link>
             </div>
-            <Graph />
+            <Graph/>
         </div>
     )
 }

@@ -34,6 +34,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="wrapper">
 
         <div className='nav'>
           <h1 className="logo"> Moody </h1>
@@ -48,6 +49,7 @@ export default class App extends Component {
         />
         <Route path='/results' render={props => <Graph {...props} /> } />
 
+        </div>
       </div>
     );
   }
