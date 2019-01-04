@@ -4,7 +4,6 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const TAGS = ["Travel", "Work", "Sick", "Date"];
 
 const Day = new mongoose.Schema({
-  user_key: { type: Number },
   user: { type: ObjectId, ref: "User" },
   date: {
     type: Date,

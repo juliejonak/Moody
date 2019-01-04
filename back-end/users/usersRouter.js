@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   User.find({})
+    .populate("days")
     .then(data => res.status(200).json(data))
     .catch(error => res.status(500).json(`Error from server: ${error}`));
 });
