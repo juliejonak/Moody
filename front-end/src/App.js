@@ -4,9 +4,9 @@ import { Route } from "react-router-dom";
 import Form from "./components/Form";
 import Insights from "./components/Insights";
 import NavBarPage from './components/Menu';
+import Home from './components/Home';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCalendarDay } from '@fortawesome/free-solid-svg-icons';
+
 import './index.css';
 import "./App.css";
 
@@ -39,17 +39,12 @@ export default class App extends Component {
           <h1 className="logo"> Moody </h1>
           <NavBarPage />
         </div>
-
-       <div className='dayBox'>
-           <FontAwesomeIcon icon={faCalendarDay} style={{color: 'white', width: '3vh', height: 'auto'}} />
-           <p className='add-day'>Add Day</p>
-       </div>
         
         <Route path="/form" render={props => <Form {...props} />} />
         <Route
           exact
           path="/"
-          render={props => <Insights {...props} data={this.state.data} />}
+          render={props => <Home {...props} data={this.state.data} />}
         />
         <Route path='/results' render={props => <Insights {...props} /> } />
 
