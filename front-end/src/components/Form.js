@@ -43,9 +43,6 @@ export default class Form extends React.Component{
         .catch(err => console.log("Couldn't add! ahhhh"))
     }
 
-    //implement the HTML CSS design of pages
-    //setup axios
-
     nextSlide = (e) => {
       this.updateVal(e);
       this.setState(prevState => ({
@@ -80,11 +77,6 @@ export default class Form extends React.Component{
     render(){
         return(
             <div>
-
-              <button onClick={this.submit}>Press me</button>
-
-              <p>{this.state.date}</p>
-
               <div id="formCarousel" className="carousel slide" data-ride="carousel">
 
                 <div className="carousel-inner">

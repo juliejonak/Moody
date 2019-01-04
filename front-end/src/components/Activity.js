@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRunning, faHiking, faSwimmer, faWalking, faUserInjured, faPlaneDeparture, faBook, faCouch, faDolly, faHeart, faShoppingBag, faGlassCheers } from '@fortawesome/free-solid-svg-icons';
 import '../index.css';
@@ -23,6 +24,8 @@ const Activity = (props) => {
           <FontAwesomeIcon onClick={props.update} icon={faShoppingBag} className="tags" title="shopping" value="shopping" id="tags11" />
           <FontAwesomeIcon onClick={props.update} icon={faGlassCheers} className="tags" title="socializing" value="socializing" id="tags12" />
         </div>
+
+        <button onClick={props.submit} className='submitBox' style={{padding: '10px 0px 0px 45px'}}><Link to='/results' style={{fontFamily: 'Timmana, sans-serif', fontSize: '22px', color: 'white', fontWeight: 'bold'}}>Submit</Link></button>
       </div>
     </div>
   )

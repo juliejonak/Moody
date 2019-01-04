@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  margin: 50px 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .App-logo {
@@ -57,6 +64,7 @@
   justify-content: space-evenly;
   align-items: center;
   border-radius: 8px;
+  margin-bottom: 40px;
 }
 
 .nav{
@@ -65,4 +73,26 @@
   align-items: baseline;
   margin: 0 10vw;
   margin-top: 4vh;
+}
+
+.submit {
+  font-family: 'Timmana', sans-serif;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  height: 5px;
+}
+
+.submitBox{
+  background-color: rgb(255, 64, 153);
+  width: 146px;
+  margin: auto;
+  height: 6vh;
+  border-radius: 8px;
+  margin-top: 30px;
+  display: flex;
+}
+
+.submitBox:hover{
+  background-color: rgb(0, 185, 244);
 }
