@@ -3,7 +3,16 @@ import axios from "axios";
 import { Route } from "react-router-dom";
 import Form from "./components/Form";
 import Insights from "./components/Insights";
+import NavBarPage from './components/Menu';
+import Home from './components/Home';
+
+
+import './index.css';
 import "./App.css";
+
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 
 export default class App extends Component {
   constructor() {
@@ -25,13 +34,20 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>Home</p>
-        <Route exact path="/" render={props => <Form {...props} />} />
+
+        <div className='nav'>
+          <h1 className="logo"> Moody </h1>
+          <NavBarPage />
+        </div>
+        
+        <Route path="/form" render={props => <Form {...props} />} />
         <Route
           exact
-          path="/results"
-          render={props => <Insights {...props} data={this.state.data} />}
+          path="/"
+          render={props => <Home {...props} data={this.state.data} />}
         />
+        <Route path='/results' render={props => <Insights {...props} /> } />
+
       </div>
     );
   }
