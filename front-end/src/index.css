@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('http://lorempixel.com/1500/850/nature/10');
+  background-repeat: no-repeat;
 }
 
 code {
@@ -71,10 +73,6 @@ code {
     box-sizing: border-box;
 }
 
-#root {
-  margin: 0 500;
-}
-
 body{
     display: flex;
     width: 1000px;
@@ -114,6 +112,18 @@ body{
     border-radius: 35px 35px 0 35px;
     width: 700px;
     height: 500px;
+    overflow: hidden;
+}
+
+.graphBox{
+    margin: 5px;
+    padding: 45px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 35px 35px 0 35px;
+    width: 700px;
+    height: 400px;
     overflow: hidden;
 }
 
