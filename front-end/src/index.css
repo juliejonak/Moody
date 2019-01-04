@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Timmana');
+@import url("https://fonts.googleapis.com/css?family=Timmana");
 
 body {
   margin: 0;
@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('http://lorempixel.com/1500/850/nature/10');
+  background-repeat: no-repeat; */
 }
 
 code {
@@ -21,208 +23,263 @@ code {
   border-radius: 50px;
 }
 
-.mood, .sleep, .eat, .water, .alcohol, .caffeine {
-    -webkit-appearance: none;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: all .2s ease;
-    outline: none;
-    font-size: 4em;
-    color:gray;
+.mood,
+.sleep,
+.eat,
+.water,
+.alcohol,
+.caffeine {
+  -webkit-appearance: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.2s ease;
+  outline: none;
+  font-size: 4em;
+  color: gray;
 }
 
 .sleep {
-    font-weight: bolder;
-    font-family: 'Timmana', sans-serif;
+  font-weight: bolder;
+  font-family: "Timmana", sans-serif;
 }
 
-.mood:hover, .mood:checked, .sleep:hover, .sleep:checked {
-    color: #FF4099;
-    border-radius: 50px;
+.mood:hover,
+.mood:checked,
+.sleep:hover,
+.sleep:checked {
+  color: #ff4099;
+  border-radius: 50px;
 }
 
 .water {
-    font-size: 3em;
+  font-size: 3em;
 }
 
-.water:hover, .water:checked{
-    color: #3153EA;
-    border-radius: 50px;
+.water:hover,
+.water:checked {
+  color: #3153ea;
+  border-radius: 50px;
 }
 
-
-.eat:hover, .eat:checked {
-    color: #FF4099;
-    border-radius: 50px;
+.eat:hover,
+.eat:checked {
+  color: #ff4099;
+  border-radius: 50px;
 }
 
-.alcohol:hover, .alcohol:checked {
-    color: #FFD016;
-    border-radius: 50px;
+.alcohol:hover,
+.alcohol:checked {
+  color: #ffd016;
+  border-radius: 50px;
 }
 
-.caffeine:hover, .caffine:checked {
-    color: rgb(83, 70, 70);
-    border-radius: 50px;
+.caffeine:hover,
+.caffine:checked {
+  color: rgb(83, 70, 70);
+  border-radius: 50px;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    width: 1000px;
-    justify-items: center;
-    align-items: center;
-    background-color:  #E5E9F9;
-    margin: 0 auto;
-    flex-direction: column;
+body {
+  display: flex;
+  width: 1000px;
+  justify-items: center;
+  align-items: center;
+  background-color: #e5e9f9;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
 .navbar {
-    font-size: 3em;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-evenly;
+  font-size: 3em;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-evenly;
 }
 
-
-.box{
-    margin: 5px;
-    padding: 45px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 35px 35px 0 35px;
-    width: 700px;
+.box {
+  margin: 5px;
+  padding: 45px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px 35px 0 35px;
+  width: 700px;
 }
 
-.box1{
-    background-color: white;
-    box-shadow: 2px 2px 4px lightgray;
+.homeBox {
+  margin: 5px;
+  padding: 45px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px 35px 0 35px;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
 }
 
+.graphBox {
+  margin: 5px;
+  padding: 45px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 35px 35px 0 35px;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+}
 
-.box1 h1{
-    color: #FF4099;
-    font-size: 72px;
-    font-family: 'Timmana', sans-serif;
-    letter-spacing: 2px;
-    margin: 15px;
+.box1 {
+  background-color: white;
+  box-shadow: 2px 2px 4px lightgray;
+}
+
+.box1 h1 {
+  color: #ff4099;
+  font-size: 72px;
+  font-family: "Timmana", sans-serif;
+  letter-spacing: 2px;
+  margin: 15px;
 }
 
 .box2 {
-    background-color: white;
-    box-shadow: 2px 2px 4px lightgray;
-    font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  background-color: white;
+  box-shadow: 2px 2px 4px lightgray;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.form-text{
-    font-family: 'Timmana', sans-serif;
-    font-size: 24px;
-    color: #FF4099;
-    font-weight: bolder;
-    margin: 15px 0;
+.form-text {
+  font-family: "Timmana", sans-serif;
+  font-size: 24px;
+  color: #ff4099;
+  font-weight: bolder;
+  margin: 15px 0;
 }
 
 .form-sub-text {
-    font-size: 18px;
-    font-family: 'Timmana', sans-serif;
-    margin: 5px 0;
+  font-size: 18px;
+  font-family: "Timmana", sans-serif;
+  margin: 5px 0;
 }
 
 .form-sub-category {
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.form-sub-category .tags, .alcohol, .water, .caffeine {
-    padding: 10px;
+.form-sub-category .tags,
+.alcohol,
+.water,
+.caffeine {
+  padding: 10px;
 }
 
-.mood, .sleep, .eat, .water, .alcohol, .caffeine, .tags{
-    -webkit-appearance: none;
-    border: none;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: all .2s ease;
-    outline: none;
-    font-size: 4em;
-    color:gray;
+.mood,
+.sleep,
+.eat,
+.water,
+.alcohol,
+.caffeine,
+.tags {
+  -webkit-appearance: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.2s ease;
+  outline: none;
+  font-size: 4em;
+  color: gray;
 }
 
 .sleep {
-    font-weight: bolder;
-    font-family: 'Timmana', sans-serif;
+  font-weight: bolder;
+  font-family: "Timmana", sans-serif;
 }
 
-.mood:hover, .mood:checked, .sleep:hover, .sleep:checked {
-    color: #FF4099;
+.mood:hover,
+.mood:checked,
+.sleep:hover,
+.sleep:checked {
+  color: #ff4099;
 }
 
-.water:hover, .water:checked{
-    color: #3153EA;
+.water:hover,
+.water:checked {
+  color: #3153ea;
 }
 
-.eat:hover, .eat:checked{
-    color: #FF4099;
+.eat:hover,
+.eat:checked {
+  color: #ff4099;
 }
 
-.alcohol:hover, .alcohol:checked{
-    color: #FFD016;
+.alcohol:hover,
+.alcohol:checked {
+  color: #ffd016;
 }
 
-.caffeine:hover, .caffeine:checked{
-    color: rgb(158, 122, 75);
+.caffeine:hover,
+.caffeine:checked {
+  color: rgb(158, 122, 75);
 }
 
-.tags:hover{
-    color: rgb(55, 186, 238);
+.tags:hover {
+  color: rgb(55, 186, 238);
 }
 
-#caffeine1, #alcohol1, #water1 {
+#caffeine1,
+#alcohol1,
+#water1 {
   font-size: 60px;
 }
 
-#caffeine2, #alcohol2, #water2{
-    font-size: 80px;
+#caffeine2,
+#alcohol2,
+#water2 {
+  font-size: 80px;
 }
 
-#caffeine3, #alcohol3, #water3{
-    font-size: 110px;
+#caffeine3,
+#alcohol3,
+#water3 {
+  font-size: 110px;
 }
 
 /* button styling */
 button {
-    font-family: 'Timmana', sans-serif;
-    border: 0;
-    padding: 15px 30px 7px 30px;
-    border-radius: 7px;
-    font-weight: 400;
-    font-size: 20pt;
-    outline: none;
+  font-family: "Timmana", sans-serif;
+  border: 0;
+  padding: 15px 30px 7px 30px;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 20pt;
+  outline: none;
 }
-button i{
-    padding-right: 14px;
+button i {
+  padding-right: 14px;
 }
 
 button.btn {
-    color: white;
-    background: #FF4099 ;
+  color: white;
+  background: #ff4099;
 }
 
 button.btn:hover {
-    box-shadow: 0 1px 1px #EAEAEA, inset 2px 2px 0 #8e2355;
-    background: #FF4099;
+  box-shadow: 0 1px 1px #eaeaea, inset 2px 2px 0 #8e2355;
+  background: #ff4099;
 }

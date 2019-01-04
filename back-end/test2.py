@@ -103,37 +103,40 @@ def main():
     tweet_cap = 'broken'
 
     if day_sentiment == 0:
-        tweet_cap = '<b>Your tweets are neutral today</b>'
+        tweet_cap = '<b><span style="color: #38A1F3">Your tweets are neutral today</span></b>'
     elif day_sentiment > 0:
-        tweet_cap = '<b>Your tweets are postive today</b>'
+        tweet_cap = '<b><span style="color: #38A1F3">Your tweets are postive today</span></b>'
     elif day_sentiment < 0:
-        tweet_cap = '<b>Your tweets are negative today</b>'
+        tweet_cap = '<b><span style="color: #38A1F3">Your tweets are negative today</span></b>'
     else:
-        tweet_cap = '<b>You have no tweets to analyze today</b>'
+        tweet_cap = '<b><span style="color: #38A1F3">You have no tweets to analyze today</span></b>'
 
     caption_dict = {'coffee':'hold','drinks':'hold','sleep':'hold','exercise':'hold'}
 
     for i in range(len(correlation_list)):
         if correlation_dict[correlation_list[i]] >= .7:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> increase </b>'
 
         elif correlation_dict[correlation_list[i]] >= .5:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase moderately </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> increase moderately </b>'
 
         elif correlation_dict[correlation_list[i]] >= .3:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> increase a little </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> increase a little </b>'
 
         elif correlation_dict[correlation_list[i]] < .3 and correlation_dict[correlation_list[i]] > -.3:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>There is no relationship between <b>' + str(correlation_list[i]) + '</b> and your mood'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>There is no relationship between <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> and your <span style="color: #FF4099">mood</span>'
 
         elif correlation_dict[correlation_list[i]] <= -.3 and correlation_dict[correlation_list[i]] > -.5:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease a little </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> decrease a little </b>'
 
         elif correlation_dict[correlation_list[i]] <= -.5 and correlation_dict[correlation_list[i]] > -.7:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease moderately </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> decrease moderately </b>'
 
         elif correlation_dict[correlation_list[i]] < -.7:
-            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b>' + str(correlation_list[i]) + '</b> goes up, your mood tends to <b> decrease </b>'
+            caption_dict[correlation_list[i]] = tweet_cap + '<br>As your <b><span style="color: #009900">' + str(correlation_list[i]) + '</span></b> goes up, your <span style="color: #FF4099">mood</span> tends to <b> decrease </b>'
+
+        #255, 208, 22
+
 
     #Create mood rolling average
     rolling_mood = df_plot['mood'].rolling(3).mean()
@@ -165,13 +168,13 @@ def main():
         name= 'Caffeine',
         text= df_plot['caffeine'],
         fill='tozeroy',
-        fillcolor='rgba(0,191,255,.2)',
+        fillcolor='rgba(0, 153, 0,.2)',
         hoverinfo='text',
         line=dict(
             shape='spline',
         width=0.5),
         opacity = .01,
-        marker = dict(color = 'rgba(0,191,255,0.8)'))
+        marker = dict(color = 'rgba(0, 153, 0,0.8)'))
 
 
     trace3 = go.Scatter(
@@ -180,13 +183,13 @@ def main():
         y = df_plot['alcohol'],
         mode = 'lines',
         name= 'Alcohol',
-        fillcolor='rgba(0,191,255,.2)',
+        fillcolor='rgba(0, 153, 0,.2)',
         fill='tozeroy',
         hoverinfo = 'text',
         text= df_plot['alcohol'],
         line=dict(
             shape='spline'),
-        marker = dict(color = 'rgba(0,191,255,0.8)'))
+        marker = dict(color = 'rgba(0, 153, 0,0.8)'))
 
     trace4 = go.Scatter(
         visible = False,
@@ -195,11 +198,11 @@ def main():
         mode = 'lines',
         name= 'Food',
         fill='tozeroy',
-        fillcolor='rgba(0,191,255,.2)',
+        fillcolor='rgba(0, 153, 0,.2)',
         text= df_plot['food'],
         line=dict(
             shape='spline'),
-        marker = dict(color = 'rgba(0,191,255,0.8)'))
+        marker = dict(color = 'rgba(0, 153, 0,0.8)'))
 
     trace5 = go.Scatter(
         visible = False,
@@ -208,11 +211,11 @@ def main():
         mode = 'lines',
         name= 'Sleep',
         fill='tozeroy',
-        fillcolor='rgba(0,191,255,.2)',
+        fillcolor='rgba(0, 153, 0,.2)',
         text= df_plot['sleep'],
         line=dict(
             shape='spline'),
-        marker = dict(color = 'rgba(0,191,255,0.8)'))
+        marker = dict(color = 'rgba(0, 153, 0,0.8)'))
 
     trace6 = go.Scatter(
         visible = False,
@@ -221,11 +224,11 @@ def main():
         mode = 'lines',
         name= 'Water',
         fill='tozeroy',
-        fillcolor='rgba(0,191,255,.2)',
+        fillcolor='rgba(0, 153, 0,.2)',
         text= df_plot['water'],
         line=dict(
             shape='spline'),
-        marker = dict(color = 'rgba(0,191,255,0.8)'))
+        marker = dict(color = 'rgba(0, 153, 0,0.8)'))
 
     data = [trace1, trace2, trace3, trace4, trace5, trace6]
 
