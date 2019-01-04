@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Route } from "react-router-dom";
-import Form from "./components/Form";
+import UserForm from './components/UserForm';
 import Graph from './components/Graphs';
 import NavBarPage from './components/Menu';
 import Home from './components/Home';
@@ -41,7 +41,7 @@ export default class App extends Component {
           <NavBarPage />
         </div>
 
-        <Route path="/form" render={props => <Form {...props} />} />
+        <Route path="/form" render={props => <UserForm {...props} />} />
         <Route
           exact
           path="/"
