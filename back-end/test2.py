@@ -88,9 +88,7 @@ def main():
     today_tweets['sentiment'] = tweet_sentiment
 
     day_sentiment = today_tweets['sentiment'].mean()
-
-    print(day_sentiment)
-    print(today_tweets)
+    
 #########################################################
     #Correlations between mood and correlation_list items
     correlation_list = ['caffeine','alcohol','food','sleep','water']
@@ -235,10 +233,6 @@ def main():
     updatemenus = list([
         dict(active=-1,
             buttons=list([
-                dict(label = 'Mood',
-                    method = 'update',
-                    args = [{'visible': [True, False, False, False, False, False]},
-                            {'title': 'Examine your mood over time'}]),
                 dict(label = 'Caffeine',
                     method = 'update',
                     args = [{'visible': [True, True, False, False, False, False]},
@@ -263,7 +257,7 @@ def main():
         )
     ])
 
-    layout = dict(title = 'Results',
+    layout = dict(title = tweet_cap+'<br>Your mood over time',
                 xaxis= dict(title='Date', ticklen = 5,
                             zeroline=False),
                 autosize=False,
@@ -273,7 +267,7 @@ def main():
                 updatemenus=updatemenus)
 
     fig = dict(data = data, layout = layout)
-    plot_url = py.plot(fig, filename='plot from API (12)')
+    plot_url = py.plot(fig, filename='plot from API (12)', auto_open=False)
 
 #start process
 if __name__ == '__main__':
