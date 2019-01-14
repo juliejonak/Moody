@@ -3,6 +3,7 @@ const { PythonShell } = require("python-shell");
 
 const Day = require("./Day.js");
 const User = require("../users/User.js");
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -19,6 +20,7 @@ router.get("/:id", (req, res) => {
     .catch(error => res.status(500).json(`Error from server: ${error}`));
 });
 
+// clean up
 router.post("/", (req, res) => {
   const day = req.body;
   Day.create(day)
