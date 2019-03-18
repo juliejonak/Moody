@@ -6,7 +6,6 @@ import Graph from './components/Graphs';
 import NavBarPage from './components/Menu';
 import Home from './components/Home';
 
-
 import './index.css';
 import "./App.css";
 
@@ -19,6 +18,7 @@ export default class App extends Component {
     super();
     this.state = {
       data: [],
+      // user information
     };
   }
 
