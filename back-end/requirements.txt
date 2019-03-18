@@ -2,4 +2,4 @@ plotly
 numpy
 pandas
 tweepy
-TextBlog
+textblob
