@@ -11,6 +11,6 @@
     "python-shell": "^1.0.7"
   },
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "node ./server.js"
   }
 }
