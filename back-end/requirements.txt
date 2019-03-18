@@ -1,5 +1,5 @@
-plotly=1.45.2
-numpy=1.16.2
-pandas=0.24.2
-tweepy=3.7.0
-TextBlog=0.15.3
+plotly
+numpy
+pandas
+tweepy
+TextBlog
