@@ -35,7 +35,7 @@ export default class Form extends React.Component {
     };
 
     axios
-      .post("http://localhost:5000/api/days", newDay)
+      .post("https://moodyio.herokuapp.com/api/days", newDay)
       .then(response => {
         // console.log(newDay, response);
       })
